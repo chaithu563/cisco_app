@@ -1,0 +1,13 @@
+﻿<h2>date picker code</h2>
+<div style="display:inline-block; min-height:290px;">
+	<!--<datepicker ng-model="dt"show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>-->
+	</br>
+
+
+	<p class="input-group">
+		<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+		<span class="input-group-btn">
+			<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+		</span>
+	</p>
+</div>
