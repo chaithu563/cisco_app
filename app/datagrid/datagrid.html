@@ -1,0 +1,19 @@
+﻿<div>
+
+
+    <table>
+        <tr>
+            <th>Name</th> <th>Age</th> <th>Desc</th> <th> <input type="button" ng-click="addItem()" value="add" /></th>
+        </tr>
+        <tr ng-repeat="x in gridData">
+            <td> <input type="text"  value="{{x.name}}" /></td>
+            <td>  <input type="text" value= "{{ x.age }}" />  </td>
+            <td>   <input type="text" value= "{{ x.desc }}" /> </td>
+
+            <td> <input type="button" ng-click="deleteItem(x.id)"   value="delete" /></td>
+        </tr>
+
+    </table>
+
+
+</div>
