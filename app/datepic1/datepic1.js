@@ -8,6 +8,35 @@ angular.module('myApp.datepic1', ['ui.router','ui.bootstrap'])
         templateUrl: 'datepic1/datepic1.html',
         controller: 'datepic1Ctrl'
     })
+
+    //.state('home', {
+    //    url: '/',
+    //    views: {
+    //        'header': {
+    //            templateUrl: '/templates/partials/header.html',
+    //            controller: 'HeaderController'
+    //        },
+    //        'content': {
+    //            templateUrl: '/templates/partials/content.html',
+    //            controller: 'ContentController'
+    //        },
+    //        'footer': {
+    //            templateUrl: '/templates/partials/footer.html',
+    //            controller: 'FooterController'
+    //        }
+    //    }
+    //})
+
+    //.state('shows', {
+    //    url: '/shows',
+    //    templateUrl: 'templates/shows.html',
+    //    controller: 'ShowsController'
+    //})
+    //    .state('shows.detail', {
+    //        url: '/detail/:id',
+    //        templateUrl: 'templates/shows-detail.html',
+    //        controller: 'ShowsDetailController'
+    //    });
 }])
 
 .controller('datepic1Ctrl', ['$scope','$http',,function ($scope,$http) {

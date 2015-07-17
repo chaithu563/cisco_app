@@ -18,7 +18,14 @@ angular.module('myApp.view1', ['ui.router'])
       
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$state', '$scope', function ($state, $scope) {
 
+    $scope.fn1 = function () {
+
+
+        $state.go("datepic1");
+    }
+
+   
 
 }]);
