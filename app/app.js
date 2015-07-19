@@ -12,9 +12,12 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.datepic1',
    'myApp.datagrid',
+   'myApp.service',
   'myApp.version',
   'ui.bootstrap',
-   'underscore'
+   'underscore',
+   'ngResource',
+   'myApp.directives'
 ]).
 config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
