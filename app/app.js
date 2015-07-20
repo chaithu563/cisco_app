@@ -12,6 +12,7 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.datepic1',
    'myApp.datagrid',
+    'myApp.nview',
    'myApp.service',
   'myApp.version',
   'ui.bootstrap',
