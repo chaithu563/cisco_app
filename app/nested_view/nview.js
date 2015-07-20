@@ -7,7 +7,7 @@ angular.module('myApp.nview', ['ui.router', 'ui.bootstrap'])
         url: '/nview',
         views: {
             '': {
-                url: '',
+               // url: '',
                 templateUrl: 'nested_view/nview.html',
                 controller: 'nviewCtrl'
             },
@@ -60,7 +60,7 @@ angular.module('myApp.nview', ['ui.router', 'ui.bootstrap'])
     //    });
 }])
 
-.controller('nviewCtrl', ['$scope', '$http', , function ($scope, $http) {
+.controller('nviewCtrl', ['$scope', '$http',  function ($scope, $http) {
 
 
     //$scope.today = function () {
