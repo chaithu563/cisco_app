@@ -7,28 +7,28 @@ angular.module('myApp.nview', ['ui.router', 'ui.bootstrap'])
         url: '/nview',
         views: {
             '': {
-               // url: '',
+                // url: '',
                 templateUrl: 'nested_view/nview.html',
                 controller: 'nviewCtrl'
             },
-                'header@nview': {
-                  //  url: '',
-                    templateUrl: 'nested_view/templates/header.html'
-                   // controller: 'HeaderController'
-                },
-                'content@nview': {
-                   // url:'',
-                    templateUrl: 'nested_view/templates/content.html'
-                   // controller: 'ContentController'
-                },
-                'footer@nview': {
-                   // url: '',
-                    templateUrl: 'nested_view/templates/footer.html'
-                   // controller: 'FooterController'
-                }
+            'header@nview': {
+                //  url: '',
+                templateUrl: 'nested_view/templates/header.html'
+                // controller: 'HeaderController'
+            },
+            'content@nview': {
+                // url:'',
+                templateUrl: 'nested_view/templates/content.html'
+                // controller: 'ContentController'
+            },
+            'footer@nview': {
+                // url: '',
+                templateUrl: 'nested_view/templates/footer.html'
+                // controller: 'FooterController'
             }
-       
-    })
+        }
+
+    });
 
     //.state('home', {
     //    url: '/',

@@ -1,5 +1,4 @@
-
-
+'use strict';
 angular.module('myApp.view1', ['ui.router'])
 
 .config(['$stateProvider', function ($stateProvider) {
@@ -19,7 +18,7 @@ angular.module('myApp.view1', ['ui.router'])
         $state.go("datepic1");
     }
 
-    $scope.gridOptions = "delete";;
+    $scope.gridOptions = "delete";
 
     $scope.gridData = dataServices.gridData;
 
