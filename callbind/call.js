@@ -9,8 +9,15 @@ function myFunction() {
 	return this;
 }
 myFunction();
-//Invoking a Function with a Function Constructor
 
+//Invoking a Function with a Function Constructor
+function test() {
+    this.a = 1;
+    this.b = 2;
+
+}
+
+var newtest = new test();
 
 
 
@@ -19,12 +26,12 @@ myFunction();
 function myFunctioncall(a, b) {
 	return a * b;
 }
-myObject = myFunctioncall.call(myObject, 10, 2);
+var myObject = myFunctioncall.call(myObject, 10, 2);
 
 function myFunctionapply(a, b) {
 	return a * b;
 }
-myArray = [10, 2];
+var myArray = [10, 2];
 myFunctionapply.apply(myObject, myArray);
 
 
@@ -42,8 +49,11 @@ function Product(name, price) {
 	return this;
 }
 
+
+
 function Food(name, price) {
-	Product.call(this, name, price);
+    //Product.call(this, name, price);
+    Product.apply(this, [name, price])
 	this.category = 'food';
 }
 
@@ -58,11 +68,16 @@ function Toy(name, price) {
 Toy.prototype = Object.create(Product.prototype);
 Toy.prototype.constructor = Toy; // Reset the constructor from Product to Toy
 
+Product.prototype.display = function () {
+
+    console.log("Product displ");
+}
+
 var cheese = new Food('feta', 5);
 var fun = new Toy('robot', 40);
+cheese.display();
 
-
-//bind example
+//bind example1
 
 var Button = function (content) {
 	this.content = content;
@@ -80,6 +95,23 @@ looseClick(); // not bound, 'this' is not myButton
 var boundClick = myButton.click.bind(myButton);
 boundClick(); // bound, 'this' is myButton
 
+
+//bind example1
+
+this.x = 9;
+var module = {
+    x: 81,
+    getX: function () { return this.x; }
+};
+
+module.getX(); // 81
+
+var getX = module.getX;
+getX(); // 9, because in this case, "this" refers to the global object
+
+// Create a new function with 'this' bound to module
+var boundGetX = getX.bind(module);
+boundGetX(); // 81
 
 window.onload = function () {
 	

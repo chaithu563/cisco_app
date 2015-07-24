@@ -34,3 +34,34 @@ angular.module('myApp.service',[])
 
 
 }])
+
+.service('promisServices', ['$http', '_','$q', function ($http, _,$q) {
+
+  
+
+    this.getData = function () {
+        var deferred = $q.defer();
+
+        setTimeout(function () {
+          //  deferred.notify('About to greet ' + name + '.');
+            var gridData = [{ id: 1, name: "Moroni", age: 50, desc: "hero of the day1" },
+                 { id: 2, name: "Tiancum", age: 43, desc: "hero of the day2" },
+                 { id: 3, name: "Jacob", age: 27, desc: "hero of the day3" },
+                 { id: 4, name: "Nephi", age: 29, desc: "hero of the day4" },
+                 { id: 5, name: "Enos", age: 34, desc: "hero of the day5" }];
+            if (true) {
+                deferred.resolve(gridData);
+            } else {
+                deferred.reject('data  is not allowed.');
+            }
+        }, 1000);
+
+        return deferred.promise;
+
+    };
+
+   
+
+
+
+}])

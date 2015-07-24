@@ -7,8 +7,11 @@
 </head>
 <body>
 	<div>
-		<input id="myData" type="text" value="" />
-		<input type="submit" />
+        <form>
+		<input id="myData"   onkeypress="return isNumberKey(event)" type="text" value="" />
+          
+		<input  onclick="submitData()" type="submit" />
+             </form>
 	</div>
 </body>
 </html>

@@ -10,7 +10,7 @@ angular.module('myApp.datagrid', ['ui.router', 'underscore'])
     })
 }])
 
-.controller('datagridCtrl', ['$scope', '_', 'dataServices', function ($scope, _, dataServices) {
+.controller('datagridCtrl', ['$scope', '_', 'dataServices', 'promisServices', function ($scope, _, dataServices, promisServices) {
 
 
     $scope.addItem = function () {
@@ -23,7 +23,13 @@ angular.module('myApp.datagrid', ['ui.router', 'underscore'])
     }
 
     function loadGridData() {
-        $scope.gridData = dataServices.gridData;
+        //   $scope.gridData = dataServices.gridData;
+        promisServices.getData().then(function (data) {
+
+            $scope.gridData = data;
+            $scope.$apply();
+        });
+
     }
 
     $scope.deleteItem = function (item) {

@@ -12,17 +12,21 @@
 
 				<tr>
 					<td align="right">Name</td>
-					<td><input type="text" name="Name" /></td>
+					<td><input type="text" id="Name" name="Name"  onkeypress="return isNamevalid(event)" /></td>
+                   <td><label style="color:red" id="Nameval"  /> </td> 
 				</tr>
 
 				<tr>
 					<td align="right">EMail</td>
 					<td><input type="text" name="EMail" /></td>
+                     <td><label id="EMailval"  /> </td> 
 				</tr>
 
 				<tr>
 					<td align="right">Zip Code</td>
 					<td><input type="text" name="Zip" /></td>
+                     <td><label style="color:red" id="Label1"  /> </td>
+                    
 				</tr>
 
 				<tr>
@@ -35,11 +39,13 @@
 							<option value="3">INDIA</option>
 						</select>
 					</td>
+                     <td><label style="color:red" id="Label2"  /> </td>
 				</tr>
 
 				<tr>
 					<td align="right"></td>
 					<td><input type="submit" value="Submit" /></td>
+                     <td><label style="color:red" id="Label3"  /> </td>
 				</tr>
 
 			</table>

@@ -56,6 +56,28 @@ var ex1 = function (b) {
       return f;
 
 };
+
+//checking whether data length is more than 7 characters or not
+function submitData() {
+
+    var data = document.getElementById("myData").value;
+    if (data.length > 7)
+        alert('Entered text is more than 7 characters');
+    else
+        alert('your data submited');
+
+};
+
+
+//allowing to enter only numeric data
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode != 46 && charCode > 31
+      && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+};
 window.onload = function () {
 	// run your script in here
 	//add();
@@ -63,11 +85,9 @@ window.onload = function () {
 	add();
 	//add1(); add1();
 	document.getElementById("myData").value =sum(7)(2);
-	//if (document.getElementById("myData").value)
-	//{
+	
 
-
-	//}
+	
 
 }
 
