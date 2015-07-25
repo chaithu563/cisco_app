@@ -54,6 +54,11 @@ function isNamevalid(evt) {
             document.getElementById("Name").disabled = true
             return false;
         }
+        else
+        {
+
+            document.getElementById("Nameval").innerHTML = document.myForm.Name.value.length + "was the length";
+        }
         
         return true;
     } else {
