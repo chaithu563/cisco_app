@@ -18,7 +18,8 @@ angular.module('myApp', [
   'ui.bootstrap',
    'underscore',
    'ngResource',
-   'myApp.directives'
+   'myApp.directives',
+   'ui.grid'
 ]).
 config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
