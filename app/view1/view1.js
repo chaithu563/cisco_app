@@ -37,9 +37,13 @@ angular.module('myApp.view1', ['ui.router','ui.grid'])
 	  { name: 'email' },
     ];
     $scope.gridOptions.data = [];
+    $scope.gridOptions.onRegisterApi = function (gridApi) {
+        $scope.gridApi1 = gridApi;
+    };
     $http.get('https://cdn.rawgit.com/angular-ui/ui-grid.info/gh-pages/data/500_complex.json')
     .success(function (data) {
     	$scope.gridOptions.data = data;
     });
+
 
 }]);
