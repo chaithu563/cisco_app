@@ -22,3 +22,13 @@ function readCookie(name) {
 function eraseCookie(name) {
 	createCookie(name, "", -1);
 }
+
+
+function addmyValue()
+{
+    var data = document.getElementById("username").value;
+    createCookie("username", data, 1);
+    console.log(document.cookie);
+    readCookie("username");
+    eraseCookie("username","",-1);
+}
